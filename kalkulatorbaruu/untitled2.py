@@ -37,40 +37,36 @@ if menu == "📖 Panduan":
         *Catatan:*
         Untuk garis vertikal, kemiringan dianggap Tak Hingga.
         """)
+if st.button("🚀 Hitung Jarak & Kemiringan"):
+    with st.spinner("Sedang menghitung..."):
+        time.sleep(1)
 
-# Halaman Kalkulator Koordinat
-elif menu == "📍 Kalkulator Koordinat":
-    st.title("📍 Kalkulator Koordinat Kartesius Interaktif")
-    st.write("Masukkan koordinat dua titik untuk mengetahui jarak dan kemiringan garis:")
+        jarak = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
 
-    col1, col2 = st.columns(2)
+        if x2 - x1 != 0:
+            kemiringan = (y2 - y1) / (x2 - x1)
+            kemiringan_text = f"{kemiringan:.2f}"
+        else:
+            kemiringan_text = "Tak Hingga (Garis Vertikal)"
 
-    with col1:
-        x1 = st.number_input("Titik Pertama - X1", value=0.0, step=0.1)
-        y1 = st.number_input("Titik Pertama - Y1", value=0.0, step=0.1)
+        st.success("✅ Perhitungan Selesai!")
+        st.metric("Jarak antara dua titik", f"{jarak:.2f}")
+        st.metric("Kemiringan garis", kemiringan_text)
 
-    with col2:
-        x2 = st.number_input("Titik Kedua - X2", value=0.0, step=0.1)
-        y2 = st.number_input("Titik Kedua - Y2", value=0.0, step=0.1)
+        # --- Visualisasi Titik dan Garis ---
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots()
+        ax.plot([x1, x2], [y1, y2], marker='o', color='blue', linestyle='-')
+        ax.text(x1, y1, f'  A({x1}, {y1})', fontsize=10, verticalalignment='bottom')
+        ax.text(x2, y2, f'  B({x2}, {y2})', fontsize=10, verticalalignment='bottom')
+        ax.grid(True)
+        ax.axhline(0, color='black', linewidth=1)
+        ax.axvline(0, color='black', linewidth=1)
+        ax.set_xlabel("X")
+        ax.set_ylabel("Y")
+        ax.set_title("Visualisasi Titik dan Garis Koordinat Kartesius")
+        st.pyplot(fig)
 
-    st.markdown("---")
-
-    if st.button("🚀 Hitung Jarak & Kemiringan"):
-        with st.spinner("Sedang menghitung..."):
-            time.sleep(1)  # simulasi proses
-
-            # Hitung jarak dan kemiringan
-            jarak = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-
-            if x2 - x1 != 0:
-                kemiringan = (y2 - y1) / (x2 - x1)
-                kemiringan_text = f"{kemiringan:.2f}"
-            else:
-                kemiringan_text = "Tak Hingga (Garis Vertikal)"
-
-            st.success("✅ Perhitungan Selesai!")
-            st.metric("Jarak antara dua titik", f"{jarak:.2f}")
-            st.metric("Kemiringan garis", kemiringan_text)
 
 # Halaman Tujuan Pembelajaran
 elif menu == "🎯 Tujuan Pembelajaran":
