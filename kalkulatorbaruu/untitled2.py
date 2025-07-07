@@ -37,6 +37,23 @@ if menu == "📖 Panduan":
         *Catatan:*
         Untuk garis vertikal, kemiringan dianggap Tak Hingga.
         """)
+        # Halaman Kalkulator Koordinat
+elif menu == "📍 Kalkulator Koordinat":
+    st.title("📍 Kalkulator Koordinat Kartesius Interaktif")
+    st.write("Masukkan koordinat dua titik untuk mengetahui jarak dan kemiringan garis:")
+
+    col1, col2 = st.columns(2)
+
+    with col1:
+        x1 = st.number_input("Titik Pertama - X1", value=0.0, step=0.1)
+        y1 = st.number_input("Titik Pertama - Y1", value=0.0, step=0.1)
+
+    with col2:
+        x2 = st.number_input("Titik Kedua - X2", value=0.0, step=0.1)
+        y2 = st.number_input("Titik Kedua - Y2", value=0.0, step=0.1)
+
+    st.markdown("---")
+
 if st.button("🚀 Hitung Jarak & Kemiringan"):
     with st.spinner("Sedang menghitung..."):
         time.sleep(1)
