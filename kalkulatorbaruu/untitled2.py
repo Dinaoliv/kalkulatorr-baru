@@ -29,6 +29,7 @@ if menu == "Panduan":
         - Hitung Kemiringan garis yang menghubungkan kedua titik.
 
         *Langkah-langkah:*
+        
         1️⃣ Pilih menu 'Kalkulator Koordinat'.
         
         2️⃣ Masukkan koordinat (X1, Y1) dan (X2, Y2).
