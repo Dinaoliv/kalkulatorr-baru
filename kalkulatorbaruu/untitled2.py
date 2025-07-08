@@ -38,8 +38,8 @@ if menu == "Panduan":
         Untuk garis vertikal, kemiringan dianggap Tak Hingga.
         """)
         # Halaman Kalkulator Koordinat
-elif menu == "📍 Kalkulator Koordinat":
-    st.title("📍 Kalkulator Koordinat Kartesius Interaktif")
+elif menu == "Kalkulator Koordinat":
+    st.title("Kalkulator Koordinat Kartesius Interaktif")
     st.write("Masukkan koordinat dua titik untuk mengetahui jarak dan kemiringan garis:")
 
     col1, col2 = st.columns(2)
@@ -86,16 +86,15 @@ if st.button("🚀 Hitung Jarak & Kemiringan"):
 
 
 # Halaman Tujuan Pembelajaran
-elif menu == "🎯 Tujuan Pembelajaran":
-    st.title("🎯 Tujuan Pembelajaran")
+elif menu == "Tujuan Pembelajaran":
+    st.title("Tujuan Pembelajaran")
     st.write("""
     Dengan aplikasi Kalkulator Koordinat Kartesius ini, pengguna diharapkan mampu:
-
-    ✅ Memahami konsep sistem koordinat Kartesius.
-    ✅ Menentukan jarak antara dua titik di bidang koordinat.
-    ✅ Menghitung kemiringan atau gradien garis penghubung dua titik.
-    ✅ Mengembangkan kemampuan analisis geometri dasar.
-    ✅ Memanfaatkan teknologi untuk membantu perhitungan matematis.
+    1. Siswa dapat menuliskan dan memahami rumus jarak antara dua titik pada bidang koordinat kartesius.
+    2. Siswa mampu menghitung jarak antara dua titik dengan benar menggunakan rumus jarak.
+    3. Siswa dapat menyelesaikan masalah kontekstual yang berkaitan dengan jarak antara dua titik pada bidang koordinat kartesius.
+    4. Siswa dapat memahami konsep gradien (kemiringan) garis yang melalui dua titik pada bidang koordinat kartesius.
+    5. Siswa mampu menghitung gradien garis dengan menggunakan koordinat dua titik yang diketahui.
 
     Aplikasi ini sangat cocok digunakan oleh:
     - Pelajar sekolah menengah
