@@ -15,11 +15,11 @@ st.set_page_config(page_title="Kalkulator Koordinat Kartesius", layout="wide")
 
 # Sidebar Menu
 st.sidebar.title("🔧 Menu Navigasi")
-menu = st.sidebar.radio("Pilih Menu", ["📖 Panduan", "📍 Kalkulator Koordinat", "🎯 Tujuan Pembelajaran"])
+menu = st.sidebar.radio("Pilih Menu", ["Panduan", "Kalkulator Koordinat", "Tujuan Pembelajaran"])
 
 # Halaman Panduan
-if menu == "📖 Panduan":
-    st.title("📖 Panduan Penggunaan")
+if menu == "Panduan":
+    st.title("Panduan Penggunaan")
     with st.expander("Lihat Petunjuk Lengkap"):
         st.write("""
         Selamat datang di Aplikasi Kalkulator Koordinat Kartesius!
