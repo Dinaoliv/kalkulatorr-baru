@@ -30,12 +30,12 @@ if menu == "Panduan":
 
         *Langkah-langkah:*
         1️⃣ Pilih menu 'Kalkulator Koordinat'.
+        
         2️⃣ Masukkan koordinat (X1, Y1) dan (X2, Y2).
+        
         3️⃣ Klik tombol Hitung, tunggu proses selesai.
+        
         4️⃣ Lihat hasil jarak dan kemiringan yang tampil.
-
-        *Catatan:*
-        Untuk garis vertikal, kemiringan dianggap Tak Hingga.
         """)
         # Halaman Kalkulator Koordinat
 elif menu == "Kalkulator Koordinat":
