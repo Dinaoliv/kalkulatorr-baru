@@ -96,8 +96,4 @@ elif menu == "Tujuan Pembelajaran":
     4. Siswa dapat memahami konsep gradien (kemiringan) garis yang melalui dua titik pada bidang koordinat kartesius.
     5. Siswa mampu menghitung gradien garis dengan menggunakan koordinat dua titik yang diketahui.
 
-    Aplikasi ini sangat cocok digunakan oleh:
-    - Pelajar sekolah menengah
-    - Mahasiswa tingkat dasar
-    - Guru sebagai media bantu pembelajaran interaktif
     """)
